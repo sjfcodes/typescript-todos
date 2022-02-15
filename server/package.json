@@ -1,13 +1,13 @@
 {
   "name": "typescript-todos",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/app.js",
   "author": "Samuel Fox <samueljasonfox@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node dist/js/app.js",
-    "watch": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\""
+    "start": "tsc && node dist/app.js",
+    "watch": "concurrently \"tsc -w\" \"nodemon dist/app.js\""
   },
   "dependencies": {
     "@types/cors": "^2.8.12",

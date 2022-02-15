@@ -1,5 +1,6 @@
 import express, { Express } from "express";
-import "dotenv/config";
+// import "dotenv/config";
+import path from "path";
 import mongoose from "mongoose";
 import cors from "cors";
 import todoRoutes from "./routes";
@@ -12,6 +13,15 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(todoRoutes);
+
+// if we're in production, serve client/build as static assets
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../../client/build")));
+}
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../client/build/index.html"));
+});
 
 const uri: string = `${
   process.env.MONGODB_URI || "mongodb://localhost/typescript-todos"
