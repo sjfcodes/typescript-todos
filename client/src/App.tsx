@@ -54,7 +54,7 @@ const App: React.FC = () => {
     <main className='App'>
       <h1>My Todos</h1>
       <h4>
-      <a href="https://www.freecodecamp.org/news/how-to-build-a-todo-app-with-react-typescript-nodejs-and-mongodb/" about='_blank' rel="noreferrer">this app built from this example</a>
+      <a href="https://www.freecodecamp.org/news/how-to-build-a-todo-app-with-react-typescript-nodejs-and-mongodb/" about='_blank' rel="noreferrer">built from this example</a>
       </h4>
       <AddTodo saveTodo={handleSaveTodo} />
       {todos.map((todo: ITodo) => (
