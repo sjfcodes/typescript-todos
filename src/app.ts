@@ -8,6 +8,8 @@ const app: Express = express();
 const PORT: string | number = process.env.PORT || 3001;
 
 app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(todoRoutes);
 
 const uri: string = `${
