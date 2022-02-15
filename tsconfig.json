@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "outDir": "dist/js", // put the compiled code into the dist/js folder.
+      "rootDir": "src",    // compile every .ts file located in the src folder.
+      "strict": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*"], // include files that are in the src directory and sub-directory.
+    "exclude": ["src/types/*.ts", "node_modules", ".vscode"] // exclude the files or folders during compile.
+  }
