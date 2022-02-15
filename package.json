@@ -4,7 +4,6 @@
     "main": "index.js",
     "author": "Samuel Fox <samueljasonfox@gmail.com>",
     "license": "MIT",
-    "homepage": "https://typescript-todos.herokuapp.com",
     "scripts": {
         "start": "cd server && npm run start",
         "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
